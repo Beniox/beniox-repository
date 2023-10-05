@@ -3,7 +3,7 @@ export default {
     description: 'Get the current news from the tagesschau',
     async execute(os, args) {
         try {
-            const response = await fetch('https://www.tagesschau.de/api2');
+            const response = await fetch('https://www.tagesschau.de/api2/news');
             const data = await response.json()
             const news = data.news[0];
             const date = new Date(news.date);
